@@ -22,16 +22,28 @@ if(navToggle){
 
 // Counters
 function animateCounter(el){
-  const target=Number(el.dataset.counter||0);
-  const duration=1200;
-  const start=performance.now();
-  const step=(t)=>{
-    const p=Math.min((t-start)/duration,1);
-    el.textContent=Math.floor(p*target).toLocaleString();
-    if(p<1) requestAnimationFrame(step);
+  const target = Number(el.dataset.counter || 0);
+  const duration = 1200;
+  const start = performance.now();
+
+  const step = (t) => {
+    const p = Math.min((t - start) / duration, 1);
+    el.textContent = Math.floor(p * target).toLocaleString();
+    if (p < 1) {
+      requestAnimationFrame(step);
+    } else {
+      // After counting completes, format based on value
+      if (target >= 1000) {
+        el.textContent = (target / 1000).toLocaleString() + "K+";
+      } else {
+        el.textContent = target.toLocaleString() + "+";
+      }
+    }
   };
+
   requestAnimationFrame(step);
 }
+
 document.querySelectorAll('[data-counter]').forEach(animateCounter);
 
 // Portfolio filters
