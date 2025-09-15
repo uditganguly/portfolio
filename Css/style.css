@@ -3,10 +3,10 @@
   --bg2:#0a1230;
   --panel:#0f1b3d;
   --card:#0f1c44;
-  --text:#e6f0ff;
+  --text:#e6f0ff; 
   --muted:#9bb2ff;
-  --brand:#3b82f6;
-  --brand-2:#06b6d4;
+  --brand:#3b82f6; 
+  --brand-2:#06b6d4; 
   --accent:#7c3aed;
   --border:rgba(255,255,255,0.08);
   --radius:14px;
@@ -70,6 +70,10 @@ a{color:var(--brand);text-decoration:none}
 /* Hero */
 .hero{position:relative;padding:120px 20px 80px}
 .hero-inner{max-width:1100px;margin:0 auto;text-align:left}
+.hero-content-wrapper{display:flex;align-items:center;gap:40px}
+.hero-inner .profile-photo{flex-shrink:0}
+.hero-inner .profile-image{width:300px;height:300px;object-fit:contain;border-radius:50%;border:3px solid var(--brand);box-shadow:var(--glow)}
+.hero-text{flex-grow:1}
 .hero h1{font-size:44px;line-height:1.15;margin:8px 0 10px}
 .lede{color:var(--muted);max-width:800px}
 .hero-cta{display:flex;gap:12px;margin-top:16px}
@@ -86,8 +90,12 @@ a{color:var(--brand);text-decoration:none}
 }
 
 /* About */
-.about-grid{display:grid;grid-template-columns:1.2fr 1fr .8fr;gap:18px}
+.about-grid{display:grid;grid-template-columns:1fr 1fr 1fr;gap:18px}
 .downloads .download{display:block;text-align:center;margin-bottom:12px}
+
+/* Profile Photo */
+.profile-photo{display:flex;justify-content:center;align-items:center}
+.profile-image{width:250px;height:250px;object-fit:cover;border-radius:var(--radius);border:2px solid var(--brand);box-shadow:var(--glow)}
 
 /* Journey */
 .timeline{list-style:none;margin:0;padding:0;display:grid;gap:16px}
@@ -139,6 +147,9 @@ a{color:var(--brand);text-decoration:none}
 /* Responsive */
 @media (max-width:1000px){
   .about-grid{grid-template-columns:1fr}
+  .hero-content-wrapper{flex-direction:column;gap:20px}
+  .hero-inner .profile-photo{margin-bottom:10px}
+  .hero-inner .profile-image{width:200px;height:200px}
   .skills-grid{grid-template-columns:repeat(2,1fr)}
   .grid .project{grid-column:span 12}
   .cert-grid .card{grid-column:span 12}
