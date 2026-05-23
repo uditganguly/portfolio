@@ -128,7 +128,7 @@ export function HeroSection() {
               {/* Profile image container */}
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-border glow-cyan">
                 <Image
-                  src="/images/Photo Of Udit Ganguly.jpg"
+                  src="/images/udit-photo.png"
                   alt="Udit Ganguly - Aerospace AI Researcher"
                   fill
                   className="object-cover object-top"
