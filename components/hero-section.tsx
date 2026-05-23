@@ -43,7 +43,7 @@ export function HeroSection() {
                 transition={{ delay: 0.2 }}
                 className="text-primary font-mono text-sm tracking-wider uppercase"
               >
-                Aerospace AI Researcher
+                AI & Aerospace Technology Researcher
               </motion.p>
               <motion.h1 
                 initial={{ opacity: 0, y: 20 }}
@@ -129,7 +129,7 @@ export function HeroSection() {
               <div className="relative w-64 h-64 md:w-80 md:h-80 rounded-2xl overflow-hidden border-2 border-border glow-cyan">
                 <Image
                   src="/images/udit-photo.png"
-                  alt="Udit Ganguly - Aerospace AI Researcher"
+                  alt="Udit Ganguly - AI & Aerospace Technology Researcher"
                   fill
                   className="object-cover object-top"
                   priority
