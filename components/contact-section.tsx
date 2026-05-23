@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Mail, Linkedin, Github, Twitter, MapPin, Send } from "lucide-react"
+import { Mail, MapPin, Send } from "lucide-react"
 import Link from "next/link"
+import { GithubIcon, LinkedInIcon, TwitterIcon } from "./icons"
 
 const contactLinks = [
   {
@@ -12,19 +13,19 @@ const contactLinks = [
     href: "mailto:udit.ganguly@example.com",
   },
   {
-    icon: Linkedin,
+    icon: LinkedInIcon,
     label: "LinkedIn",
     value: "@uditganguly",
     href: "https://linkedin.com/in/uditganguly",
   },
   {
-    icon: Github,
+    icon: GithubIcon,
     label: "GitHub",
     value: "@uditganguly",
     href: "https://github.com/uditganguly",
   },
   {
-    icon: Twitter,
+    icon: TwitterIcon,
     label: "X / Twitter",
     value: "@uditganguly",
     href: "https://twitter.com/uditganguly",

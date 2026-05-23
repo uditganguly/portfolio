@@ -1,8 +1,9 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, ExternalLink, Star, GitFork } from "lucide-react"
+import { ExternalLink, Star, GitFork } from "lucide-react"
 import Link from "next/link"
+import { GithubIcon } from "./icons"
 
 const projects = [
   {
@@ -105,7 +106,7 @@ export function ProjectsSection() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-10 h-10 rounded-lg bg-primary/10 flex items-center justify-center shrink-0">
-                    <Github className="w-5 h-5 text-primary" />
+                    <GithubIcon className="w-5 h-5 text-primary" />
                   </div>
                   <div>
                     <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
@@ -145,7 +146,7 @@ export function ProjectsSection() {
                       className="p-2 rounded-lg hover:bg-secondary transition-colors"
                       aria-label={`View ${project.title} on GitHub`}
                     >
-                      <Github className="w-4 h-4 text-muted-foreground hover:text-primary" />
+                      <GithubIcon className="w-4 h-4 text-muted-foreground hover:text-primary" />
                     </Link>
                     {project.demo && (
                       <Link 
@@ -177,7 +178,7 @@ export function ProjectsSection() {
               <div className="space-y-4">
                 <div className="flex items-start gap-3">
                   <div className="w-8 h-8 rounded-lg bg-secondary flex items-center justify-center shrink-0">
-                    <Github className="w-4 h-4 text-muted-foreground" />
+                    <GithubIcon className="w-4 h-4 text-muted-foreground" />
                   </div>
                   <h3 className="font-semibold text-foreground group-hover:text-primary transition-colors">
                     {project.title}
@@ -231,7 +232,7 @@ export function ProjectsSection() {
             href="https://github.com/uditganguly"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-lg border border-border hover:border-primary/50 text-foreground hover:text-primary transition-all duration-300"
           >
-            <Github className="w-4 h-4" />
+            <GithubIcon className="w-4 h-4" />
             View All on GitHub
           </Link>
         </motion.div>

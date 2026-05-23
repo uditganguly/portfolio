@@ -1,13 +1,14 @@
 "use client"
 
 import { motion } from "framer-motion"
-import { Github, Linkedin, Mail, FileText, ChevronDown } from "lucide-react"
+import { Mail, FileText, ChevronDown } from "lucide-react"
 import Image from "next/image"
 import Link from "next/link"
+import { GithubIcon, LinkedInIcon } from "./icons"
 
 const socialLinks = [
-  { icon: Github, href: "https://github.com/uditganguly", label: "GitHub" },
-  { icon: Linkedin, href: "https://linkedin.com/in/uditganguly", label: "LinkedIn" },
+  { icon: GithubIcon, href: "https://github.com/uditganguly", label: "GitHub" },
+  { icon: LinkedInIcon, href: "https://linkedin.com/in/uditganguly", label: "LinkedIn" },
   { icon: Mail, href: "mailto:udit.ganguly@example.com", label: "Email" },
   { icon: FileText, href: "#publications", label: "Publications" },
 ]
@@ -85,7 +86,7 @@ export function HeroSection() {
               transition={{ delay: 0.6 }}
               className="flex items-center gap-4 pt-4"
             >
-              {socialLinks.map((link, index) => (
+              {socialLinks.map((link) => (
                 <Link
                   key={link.label}
                   href={link.href}
